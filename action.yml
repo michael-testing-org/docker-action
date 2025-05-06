@@ -1,0 +1,17 @@
+description: : 'my custom docker action'
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.my_input }}
+
+inputs:
+  my_input:
+    description: 'my input'
+    required: true
+    default: 'default value'
+
+branding:
+  icon: "package"
+  color: "blue"
